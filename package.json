@@ -1,0 +1,21 @@
+{
+  "name": "again-rt",
+  "version": "0.0.2",
+  "description": "",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shershnev-AV/again-rt.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "Shershnev Alexander",
+  "bugs": {
+    "url": "https://github.com/Shershnev-AV/again-rt/issues"
+  },
+  "homepage": "https://github.com/Shershnev-AV/again-rt#readme"
+}
