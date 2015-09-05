@@ -17,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/Shershnev-AV/again-rt/issues"
   },
-  "homepage": "https://github.com/Shershnev-AV/again-rt#readme"
+  "homepage": "https://github.com/Shershnev-AV/again-rt#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "webpack": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "lodash": "^3.10.1"
+  }
 }
