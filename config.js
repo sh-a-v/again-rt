@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import env from './env';
+import env from './env/env.js';
 
 let defaultConfig = {
   localAddress   : 'https://localhost:8080',
