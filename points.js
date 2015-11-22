@@ -1,12 +1,12 @@
 export default [
   {
     name: 'admin',
-    path: './client/app-2/init.js',
-    url : '/app2'
+    path: './client/admin/init.js',
+    url : '/admin'
   },
   {
     name: 'again',
-    path: './client/app-1/init.js',
+    path: './client/again/init.js',
     url : '/'
   }
 ];

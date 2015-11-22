@@ -34,7 +34,7 @@ export default {
     }
 
     let appContainerHtml = ReactDOMServer.renderToString(
-      serverContainerCreator.create({store, translator, renderProps})
+      serverContainerCreator({store, translator, renderProps})
     );
 
     return {store, appContainerHtml};
@@ -51,7 +51,7 @@ export default {
     return documentHtml;
   },
 
-  async getDocumentHtml(url='/') {
+  async getDocumentHtml(options) {
     let html = '';
     let pointTemplatePath = path.resolve(`./build/${options.point.name}.index.html`);
 
@@ -81,6 +81,6 @@ export default {
   },
 
   async getHtml(options) {
-    return serverConfig.serverRendering ? await this.renderApp(options) : await this.renderBlank(options);
+    return config.serverRendering ? await this.renderApp(options) : await this.renderBlank(options);
   }
 };

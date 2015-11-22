@@ -3,7 +3,7 @@ import Router, { RoutingContext } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { Provider } from 'react-redux';
 
-import Translator from 'general/translator/translator-component';
+import Translator from 'shared/translator/translator-component';
 
 export function clientContainerCreator({store, translator, routes}) {
   let history = createBrowserHistory();

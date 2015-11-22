@@ -12,11 +12,10 @@
   {% } %}
 </head>
 <body>
-  <section id="app-container" class="app-container">{{ renderedApp }}</section>
+  <section id="app-container" class="app-container">{{ RENDERED_APP }}</section>
 
   <section id="app-scripts">
-    <script>window.SERVER_CONFIG = {{ serverConfig }}</script>
-    <script>window.INITIAL_STATE = {{ initialState }}</script>
+    <script>window.GLOBAL_PARAMS = {{ GLOBAL_PARAMS }}</script>
     {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
       <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry%}"></script>
     {% } %}
