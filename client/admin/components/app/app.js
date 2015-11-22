@@ -23,7 +23,7 @@ class App extends React.Component {
     const { children } = this.props;
 
     return (
-      <div>Admin</div>
+      <div>{children}</div>
     )
   }
 }
