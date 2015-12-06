@@ -23,7 +23,7 @@ let createPointRouter = (point) => {
       headers: req.headers
     });
 
-    let location    = createLocation(req.baseUrl);
+    let location    = createLocation(req.originalUrl);
     let pointRoutes = routes[point.name];
 
     match({ routes: pointRoutes, location }, async (error, redirectLocation, renderProps) => {
@@ -40,7 +40,6 @@ let createPointRouter = (point) => {
           point,
           renderProps,
           headers: req.headers,
-          path   : req.baseUrl,
           params : req.query
         });
 
