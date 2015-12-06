@@ -4,14 +4,17 @@ import config from '../config';
 import colors from 'colors/safe';
 import path from 'path';
 import Express from 'express';
+import mongoose from 'mongoose';
 
 //import proxyHandler from './server/tools/proxy-handler';
-
 import localeRouter from './routers/locale-router';
 import pointRouters from './routers/point-routers';
 
 
 let app = Express();
+
+/* MongoDB */
+mongoose.connect('mongodb://localhost/test');
 
 /* Proxy */
 //app.use(config.proxyPath, proxyHandler.apiProxy);

@@ -1,6 +1,7 @@
 import env from '../env';
 import config from '../config';
 
+import fs from 'fs';
 import path from 'path';
 import webpack from 'webpack';
 import postcssCssnext from 'postcss-cssnext';
@@ -54,6 +55,19 @@ export let webpackServerConfig = {
   module: {
     loaders: webpackServerLoaders
   },
+
+  externals: [
+    (context, request, callback) => {
+      let nodeModules = fs.readdirSync('node_modules');
+      let nodeModule  = request.split('/')[0];
+
+      if (nodeModules.includes(nodeModule)) {
+        return callback(null, `commonjs ${request}`);
+      }
+
+      callback();
+    }
+  ],
 
   output: {
     path    : path.resolve(`./build`),
