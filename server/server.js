@@ -5,17 +5,16 @@ import colors from 'colors/safe';
 import path from 'path';
 import Express from 'express';
 
-//import serverProxy from './server-proxy';
-import serverLocales from './server-locales';
+//import proxyHandler from './server/tools/proxy-handler';
 
-import localeRouter from './server-routers/locale-router';
-import pointRouters from './server-routers/point-routers';
+import localeRouter from './routers/locale-router';
+import pointRouters from './routers/point-routers';
 
 
 let app = Express();
 
 /* Proxy */
-//app.use(config.proxyPath, serverProxy.apiProxy);
+//app.use(config.proxyPath, proxyHandler.apiProxy);
 
 /* Assets */
 app.use(config.assetsPath, Express.static(path.resolve('./build')));

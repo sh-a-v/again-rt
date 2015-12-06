@@ -1,11 +1,11 @@
 import Express from 'express';
 
-import serverLocales from '../server-locales';
+import localesHandler from '../tools/locales-handler';
 
 let localeRouter = Express.Router();
 
 localeRouter.get('/:locale', async (req, res) => {
-  let localeJson = await serverLocales.getLocale(req.params.locale);
+  let localeJson = await localesHandler.getLocale(req.params.locale);
   res.json(localeJson);
 });
 

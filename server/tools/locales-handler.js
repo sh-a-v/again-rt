@@ -1,4 +1,4 @@
-import env from '../env';
+import env from '../../env';
 
 import _ from 'lodash';
 import fs from 'fs';

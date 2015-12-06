@@ -5,7 +5,7 @@ import colors from 'colors/safe';
 import webpack from 'webpack';
 
 import webpackConfig, { webpackServerConfig } from './webpack-config';
-import serverLocales from '../server/server-locales';
+import localesHandler from '../server/tools/locales-handler';
 
 let compiler       = webpack(webpackConfig);
 let serverCompiler = webpack(webpackServerConfig);
@@ -13,7 +13,7 @@ let serverCompiler = webpack(webpackServerConfig);
 let localesCompiler = {
   run() {
     config.locales.forEach(async (locale) => {
-      await serverLocales.writeLocaleJsonToFile(locale);
+      await localesHandler.writeLocaleJsonToFile(locale);
       console.log(colors.green.bold(`Compiled locale.${locale}.build.json`));
     });
   }

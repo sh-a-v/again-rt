@@ -1,5 +1,5 @@
-import config from '../config';
-import points from '../points';
+import config from '../../config';
+import points from '../../points';
 
 import fs from 'fs';
 import path from 'path';

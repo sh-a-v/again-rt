@@ -8,7 +8,7 @@ import createLocation from 'history/lib/createLocation'
 import React from 'react';
 import { RoutingContext, match } from 'react-router';
 
-import serverRender from '../server-render';
+import serverRender from '../tools/render';
 import { setGlobalParam } from 'shared/global-params';
 import * as routes from 'shared/routes';
 
